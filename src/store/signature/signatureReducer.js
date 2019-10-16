@@ -1,8 +1,20 @@
-import { LOAD_DATA, FETCH_DATA, DELETE_SIGNATURE } from './types';
+import {
+  LOAD_DATA,
+  FETCH_DATA,
+  DELETE_SIGNATURE,
+  DELETE_REMOVAL_SIGNATURE,
+  ADD_REMOVAL_SIGNATURE,
+  REMOVE_REMOVAL_SIGNATURE
+} from './types';
 import Signature from '../../components/blocks/signature/Signature';
 
 const signatureReducer = (
-  store = { isLoading: false, signatures: [], title: '' },
+  store = {
+    isLoading: false,
+    signatures: [],
+    title: '',
+    removalSignatureIds: []
+  },
   action
 ) => {
   switch (action.type) {
@@ -21,6 +33,20 @@ const signatureReducer = (
         ...store,
         signatures: store.signatures.filter(
           signature => signature.id !== action.id
+        )
+      };
+
+    case ADD_REMOVAL_SIGNATURE:
+      return {
+        ...store,
+        removalSignatureIds: [...store.removalSignatureIds, action.id]
+      };
+
+    case REMOVE_REMOVAL_SIGNATURE:
+      return {
+        ...store,
+        removalSignatureIds: store.removalSignatureIds.filter(
+          id => id !== action.id
         )
       };
 

@@ -1,7 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { deleteSignature } from '../store/signature/signatureActions';
-import {} from '../store/signature/signatureSelectors';
+import {
+  deleteSignature,
+  addRemovalSignatureId,
+  removeRemovalSignatureId
+} from '../store/signature/signatureActions';
+import { selectHasRemovedSignatures } from '../store/signature/signatureSelectors';
 import Signature from '../components/blocks/signature';
 
 const SignatureContainer = props => {
@@ -9,13 +13,19 @@ const SignatureContainer = props => {
 };
 
 const mapStateToProps = (state, props) => {
-  return { ...props, ...state };
+  return { ...props, hasRemovedSignatures: selectHasRemovedSignatures(state) };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     deleteSignature: () => {
       dispatch(deleteSignature(ownProps.id));
+    },
+    addRemovalSignatureId: () => {
+      dispatch(addRemovalSignatureId(ownProps.id));
+    },
+    removeRemovalSignatureId: () => {
+      dispatch(removeRemovalSignatureId(ownProps.id));
     }
   };
 };
