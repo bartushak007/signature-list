@@ -1,0 +1,58 @@
+.top-menu {
+  padding: 1rem 0 2rem;
+
+  &__create {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__delete {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  &__btn {
+    border: 1px solid #0097ff;
+    color: #0097ff;
+    outline: 0;
+    background: transparent;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+  }
+
+  &__selected-tile {
+    margin-right: 1rem;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      border: 1px solid #111;
+      margin-right: 1rem;
+      border-radius: 2px;
+    }
+  }
+
+  &__delete-btn {
+    background: transparent;
+    color: #0097ff;
+    border: 0;
+    outline: 0;
+    display: flex;
+    min-width: 6rem;
+    justify-content: space-between;
+    font-size: inherit;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

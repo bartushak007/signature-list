@@ -2,11 +2,11 @@ import {
   LOAD_DATA,
   FETCH_DATA,
   DELETE_SIGNATURE,
-  DELETE_REMOVAL_SIGNATURE,
+  DELETE_REMOVAL_SIGNATURES,
   ADD_REMOVAL_SIGNATURE,
-  REMOVE_REMOVAL_SIGNATURE
+  REMOVE_REMOVAL_SIGNATURE,
+  REFRESH_REMOVAL_SIGNATURE
 } from './types';
-import Signature from '../../components/blocks/signature/Signature';
 
 const signatureReducer = (
   store = {
@@ -36,10 +36,24 @@ const signatureReducer = (
         )
       };
 
+    case DELETE_REMOVAL_SIGNATURES:
+      return {
+        ...store,
+        signatures: store.signatures.filter(
+          ({ id }) => !store.removalSignatureIds.includes(id)
+        )
+      };
+
     case ADD_REMOVAL_SIGNATURE:
       return {
         ...store,
         removalSignatureIds: [...store.removalSignatureIds, action.id]
+      };
+
+    case REFRESH_REMOVAL_SIGNATURE:
+      return {
+        ...store,
+        removalSignatureIds: []
       };
 
     case REMOVE_REMOVAL_SIGNATURE:

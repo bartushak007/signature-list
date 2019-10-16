@@ -2,9 +2,10 @@ import {
   LOAD_DATA,
   FETCH_DATA,
   DELETE_SIGNATURE,
-  DELETE_REMOVAL_SIGNATURE,
+  DELETE_REMOVAL_SIGNATURES,
   ADD_REMOVAL_SIGNATURE,
-  REMOVE_REMOVAL_SIGNATURE
+  REMOVE_REMOVAL_SIGNATURE,
+  REFRESH_REMOVAL_SIGNATURE
 } from './types';
 
 import { resolvePath } from '../../helpers/index';
@@ -24,9 +25,16 @@ export const fetchData = () => dispatch => {
 
 export const deleteSignature = id => ({ type: DELETE_SIGNATURE, id });
 
-export const deleteRemovalSignatures = () => ({
-  type: DELETE_REMOVAL_SIGNATURE
+export const refreshRemovalSignatureId = id => ({
+  type: REFRESH_REMOVAL_SIGNATURE
 });
+
+export const deleteRemovalSignatures = () => dispatch => {
+  dispatch({
+    type: DELETE_REMOVAL_SIGNATURES
+  });
+  dispatch(refreshRemovalSignatureId());
+};
 
 export const addRemovalSignatureId = id => ({
   type: ADD_REMOVAL_SIGNATURE,

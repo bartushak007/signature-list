@@ -5,8 +5,12 @@
 // Reboot
 @import 'reboot/reboot';
 
+// Pages
+@import 'pages/home';
+
 // Sections
 @import 'sections/signature-list';
+@import 'sections/top-menu';
 
 //blocks
 @import 'blocks/signature';

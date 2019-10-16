@@ -17,9 +17,11 @@ const Signature = memo(
     hasRemovedSignatures
   }) => {
     const [isChecked, setIsChecked] = useState(false);
-    useEffect(() => {
+    const addOrRemoveEffect = () => {
       isChecked ? addRemovalSignatureId() : removeRemovalSignatureId();
-    }, [isChecked]);
+    };
+
+    useEffect(addOrRemoveEffect, [isChecked]);
 
     const handleIsChecked = event => {
       setIsChecked(!isChecked);

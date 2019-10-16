@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import SignatureListContainer from '../../containers/SignatureListContainer';
+import TopMenuContainer from '../../containers/TopMenuContainer';
 
 const Home = ({ fetchData, isLoading }) => {
   const fetchDataEffect = () => fetchData();
@@ -9,6 +10,7 @@ const Home = ({ fetchData, isLoading }) => {
 
   return (
     <div className="home">
+      <TopMenuContainer />
       <SignatureListContainer />
     </div>
   );
