@@ -1,4 +1,86 @@
 {
-  "signatures": [],
-  "title": ""
+  "signatures": [
+    {
+      "url": "https://www.google.com",
+      "src": "images/blocks/signature/imperium.png",
+      "alt": "imperium",
+      "id": "0",
+      "sent": "no",
+      "installed": "no",
+      "edited": "03.04.2019 12:12"
+    },
+    {
+      "url": "https://www.google.com",
+      "src": "images/blocks/signature/indestor.png",
+      "alt": "indestor",
+      "id": "1",
+      "sent": "no",
+      "installed": "no",
+      "edited": "03.04.2019 12:12"
+    },
+    {
+      "url": "https://www.google.com",
+      "src": "images/blocks/signature/lamakler.png",
+      "alt": "lamakler",
+      "id": "2",
+      "sent": "no",
+      "installed": "no",
+      "edited": "03.04.2019 12:12"
+    },
+    {
+      "url": "https://www.google.com",
+      "src": "images/blocks/signature/rentercorp.png",
+      "alt": "rentercorp",
+      "id": "3",
+      "sent": "no",
+      "installed": "no",
+      "edited": "03.04.2019 12:12"
+    },
+    {
+      "url": "https://www.google.com",
+      "src": "images/blocks/signature/welltor.png",
+      "alt": "welltor",
+      "id": "4",
+      "sent": "no",
+      "installed": "no",
+      "edited": "03.04.2019 12:12"
+    },
+    {
+      "url": "https://www.google.com",
+      "src": "images/blocks/signature/indestor.png",
+      "alt": "indestor1",
+      "id": "5",
+      "sent": "no",
+      "installed": "no",
+      "edited": "03.04.2019 12:12"
+    },
+    {
+      "url": "https://www.google.com",
+      "src": "images/blocks/signature/lamakler.png",
+      "alt": "lamakler1",
+      "id": "6",
+      "sent": "no",
+      "installed": "no",
+      "edited": "03.04.2019 12:12"
+    },
+    {
+      "url": "https://www.google.com",
+      "src": "images/blocks/signature/rentercorp.png",
+      "alt": "rentercorp1",
+      "id": "7",
+      "sent": "no",
+      "installed": "no",
+      "edited": "03.04.2019 12:12"
+    },
+    {
+      "url": "https://www.google.com",
+      "src": "images/blocks/signature/welltor.png",
+      "alt": "welltor1",
+      "id": "8",
+      "sent": "no",
+      "installed": "no",
+      "edited": "03.04.2019 12:12"
+    }
+  ],
+  "title": "Signature List"
 }

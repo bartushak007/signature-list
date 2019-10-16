@@ -1,18 +1,22 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import SignatureListContainer from '../../containers/SignatureListContainer';
 
 const Home = ({ fetchData, isLoading }) => {
-  console.log(isLoading);
   const fetchDataEffect = () => fetchData();
 
   useEffect(fetchDataEffect, []);
 
-  return <div className="home">signature</div>;
+  return (
+    <div className="home">
+      <SignatureListContainer />
+    </div>
+  );
 };
 
 Home.propTypes = {
-  signatures: PropTypes.array,
-  title: PropTypes.string
+  isLoading: PropTypes.bool,
+  fetchData: PropTypes.func
 };
 
 export default Home;

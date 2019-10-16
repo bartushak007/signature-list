@@ -1,0 +1,46 @@
+.signature-list {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 'imperium indestor lamakler' 'rentercorp welltor indestor1' 'lamakler1 rentercorp1 welltor1';
+  grid-gap: 1.5rem;
+}
+
+.imperium {
+  grid-area: imperium;
+}
+
+.indestor {
+  grid-area: indestor;
+}
+
+.lamakler {
+  grid-area: lamakler;
+}
+
+.rentercorp {
+  grid-area: rentercorp;
+}
+
+.welltor {
+  grid-area: welltor;
+}
+
+.indestor1 {
+  grid-area: indestor1;
+}
+
+.lamakler1 {
+  grid-area: lamakler1;
+}
+
+.rentercorp1 {
+  grid-area: rentercorp1;
+}
+
+.welltor1 {
+  grid-area: welltor1;
+}
