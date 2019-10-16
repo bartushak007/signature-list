@@ -1,4 +1,4 @@
-import { LOAD_DATA, FETCH_DATA } from './types';
+import { LOAD_DATA, FETCH_DATA, DELETE_SIGNATURE } from './types';
 
 import { resolvePath } from '../../helpers/index';
 
@@ -14,3 +14,5 @@ export const fetchData = () => dispatch => {
       dispatch(setLoadData(false));
     });
 };
+
+export const deleteSignature = id => ({ type: DELETE_SIGNATURE, id });

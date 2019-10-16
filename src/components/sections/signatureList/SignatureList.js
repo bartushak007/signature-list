@@ -1,8 +1,10 @@
 import React from 'react';
-import Signature from '../../blocks/signature';
+import SignatureContainer from '../../../containers/SignatureContainer';
 
 const SignatureList = ({ signatures }) => {
-  const renderSignature = props => <Signature key={props.id} {...props} />;
+  const renderSignature = props => (
+    <SignatureContainer key={props.id} {...props} />
+  );
   return (
     <div className="signature-list">{signatures.map(renderSignature)}</div>
   );

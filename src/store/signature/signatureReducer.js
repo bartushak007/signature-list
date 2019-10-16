@@ -1,4 +1,5 @@
-import { LOAD_DATA, FETCH_DATA } from './types';
+import { LOAD_DATA, FETCH_DATA, DELETE_SIGNATURE } from './types';
+import Signature from '../../components/blocks/signature/Signature';
 
 const signatureReducer = (
   store = { isLoading: false, signatures: [], title: '' },
@@ -14,6 +15,14 @@ const signatureReducer = (
 
     case LOAD_DATA:
       return { ...store, isLoading: action.isLoading };
+
+    case DELETE_SIGNATURE:
+      return {
+        ...store,
+        signatures: store.signatures.filter(
+          signature => signature.id !== action.id
+        )
+      };
 
     default:
       return store;
