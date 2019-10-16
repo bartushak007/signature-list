@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const Home = ({ signatures, title }) => {
+const Home = ({ fetchData, isLoading }) => {
+  console.log(isLoading);
+  const fetchDataEffect = () => fetchData();
+
+  useEffect(fetchDataEffect, []);
+
   return <div className="home">signature</div>;
 };
 
