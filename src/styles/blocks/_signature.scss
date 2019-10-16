@@ -59,7 +59,7 @@
     flex-grow: 1;
     overflow: hidden;
 
-    @media (min-width: 768px) {
+    @media (min-width: 895px) {
       padding: 2rem 1rem 0 0;
     }
   }
@@ -81,8 +81,8 @@
   &__use-url {
     border: solid 1.5px #fff;
     display: inline-block;
-    font-size: 1.1rem;
-    padding: 0.2rem 2rem;
+    font-size: 0.9rem;
+    padding: 0.07rem 1.4rem;
     cursor: pointer;
     transition: 0.5s;
 
@@ -92,11 +92,11 @@
   }
 
   &__btn-list {
-    min-width: 7.5rem;
+    min-width: 5.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
   }
 
   &__btn {
@@ -110,5 +110,17 @@
 
   &:hover .signature__hidden-info {
     opacity: 1;
+  }
+
+  @media (min-width: 895px) {
+    &__use-url {
+      font-size: 1.1rem;
+      padding: 0.2rem 2rem;
+    }
+
+    &__btn-list {
+      min-width: 7.5rem;
+      font-size: 1.3rem;
+    }
   }
 }
